@@ -75,6 +75,14 @@ Here are some of [my PRs](https://github.com/DeepFusionAI/social-distance-detect
 My complete work is described in this [colab](https://github.com/DeepFusionAI/social-distance-detector/blob/master/WOC_pedestrian_detector_SD.ipynb).
 
 
+# New Features
+
+The social-distance detector add bounding boxes on the people - those violating the norm have red boxes and others have green boxes. In addition to this, the detector
+- draws lines connecting all the pairs in close proximity.
+- shows the count of people violating the social-distancing norm.
+- predict the total number of frames in the video.
+- shows the input video in bird's eye view frame as well.
+- shows a black grid, which clearly demonstrates the detector's functioning - red and green points depicting people on a black background in top-down view with red connecting lines between the violators.
 
 # Future Scope
 
@@ -87,6 +95,8 @@ I believe my contribution has helped to develop the project successfully and sol
 
 
 - For calibration, the 4 corners of the rectangle are set using a user-interactive mouse-click event. In future, we can work upon finding a suitable rectangle from frame automatically by training such detection models or finding a tool to accomplish this task. This will also allow to calibrate images on every frame.
+
+- In case the input video is too large (or to speed up the processing further), the detector can be allowed to process frames in an interval and skip some in the middle, only if it doesn't affect the performance.
 
 
 # Overall Experience
